@@ -1,0 +1,15 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"css-compiler": "node-sass --output dist/css scss/main.scss",
+		"css-watch": "npm run css-compiler && npm run css-compiler -- -w"
+	},
+	"author": "Maulik",
+	"license": "ISC",
+	"dependencies": {
+		"node-sass": "^4.11.0"
+	}
+}

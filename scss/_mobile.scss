@@ -1,0 +1,55 @@
+// Tablet and Small Laptop
+@mixin mediaSm {
+	@media screen and (max-width: 500px) {
+		* {
+			font-size: 30%;
+		}
+	}
+}
+
+@mixin mediaMd {
+	@media screen and (max-width: 600px) {
+		html {
+			font-size: 56.5%;
+		}
+
+		.project-tile {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		#contact p {
+			font-size: 2.3rem;
+		}
+
+		#contact a {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@mixin mediaLg {
+	@media screen and (max-width: 800px) {
+		#navbar .home {
+			margin-left: 0;
+		}
+
+		section {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+
+		.welcome-box {
+			font-size: 3rem;
+		}
+
+		.welcome-box p {
+			font-size: 2.7rem;
+		}
+
+		.project-tile h3 {
+			font-size: 1.3rem;
+		}
+	}
+}

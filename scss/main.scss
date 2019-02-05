@@ -1,0 +1,253 @@
+@import 'config';
+
+*,
+*::before,
+*::after {
+	// box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+h2 {
+	font-size: 3.5rem;
+	margin: 4rem;
+	padding-bottom: 0.2rem;
+	font-weight: 100;
+	color: $secondary-color;
+	display: inline-block;
+	border-bottom: 2px solid $primary-color;
+}
+
+#navbar {
+	height: 65px;
+	width: 100%;
+	background: $primary-color;
+	z-index: 5;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.726);
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	ul {
+		display: flex;
+		// box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+	}
+
+	li {
+		list-style: none;
+		border: 2px solid transparent;
+		padding: 15px;
+		transition: border 0.2s ease-in;
+	}
+
+	ul li:nth-child(2) {
+		margin-left: auto;
+	}
+	ul li:first-child {
+		margin-left: 30px;
+	}
+
+	li:hover {
+		border: 2px solid white;
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 2.2rem;
+		color: black;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+}
+
+// WELCOME section
+
+#welcome-section {
+	// display: block;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('/dist/img/img-1.jpg');
+	color: $primary-color;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	h1 {
+		font-size: 6rem;
+		border-bottom: 2px solid white;
+	}
+	p {
+		font-size: 4rem;
+		text-align: center;
+		padding-top: 5px;
+	}
+}
+
+// ABOUT SECTION
+#about {
+	height: 100vh;
+	width: 100%;
+	// position: relative;
+	// text-align: center;
+
+	#info {
+		// width: 40rem;
+		// height: 30rem;
+
+		padding: 1.8rem;
+		position: relative;
+		top: 14rem;
+		left: 38rem;
+		max-width: 50rem;
+		text-align: center;
+		line-height: 2.5rem;
+		font-weight: 400;
+		font-size: 2rem;
+		box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.726);
+		color: $secondary-color;
+		p {
+			margin: 1.5rem auto;
+		}
+	}
+
+	#info::before {
+		content: '';
+		height: 11rem;
+		position: absolute;
+		width: 5rem;
+		background: $primary-color;
+		left: -3.3rem;
+		top: 3rem;
+		transform: rotate(-3deg);
+	}
+
+	#info::after {
+		content: '';
+		height: 11rem;
+		position: absolute;
+		width: 5rem;
+		background: $primary-color;
+		left: 52rem;
+		top: 3rem;
+		transform: rotate(-3deg);
+	}
+}
+
+// PROJECTS SECTION
+
+#projects {
+	// height: 150%;
+	// width: 100%;
+	background: lightgrey;
+
+	#p-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.project-tile {
+		// padding: 50rem;
+		flex-basis: 500px;
+		margin: 5rem;
+		display: block;
+		text-decoration: none;
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		border: 2rem solid white;
+		position: relative;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		.project-tile:nth-child(4) h3 {
+			top: -8rem;
+		}
+		h3 {
+			background: $primary-color;
+			padding: 2rem 1.6rem;
+			text-transform: uppercase;
+			position: absolute;
+			color: black;
+			// display: block;
+			top: -6rem;
+			left: 50%;
+			text-align: center;
+			line-height: 2rem;
+			transform: rotate(-4deg) translate(-50%);
+			box-shadow: inset 0 1rem 3rem rgba(0, 0, 0, 0.3);
+			box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	.project-tile::after {
+		content: '';
+		height: 8rem;
+		position: absolute;
+		width: 20rem;
+		background: $primary-color;
+		left: 35%;
+		top: 23rem;
+		transform: rotate(-3deg);
+		box-shadow: inset 0 1rem 3rem rgba(0, 0, 0, 0.3);
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+	}
+}
+
+// Footer
+
+footer {
+	text-align: center;
+	background: rgba(0, 0, 0, 0.863);
+
+	h1 {
+		word-spacing: 1rem;
+		letter-spacing: 0.5rem;
+		font-weight: 300;
+		padding-top: 5rem;
+		color: white;
+	}
+
+	ul {
+		padding-top: 1.3rem;
+		padding-bottom: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	li {
+		font-size: 2.1rem;
+		color: black;
+		margin: 2rem;
+		list-style: none;
+		padding: 1.6rem;
+		border-radius: 50%;
+		background: $primary-color;
+		transition: all 0.3s;
+		transform: scale(0.8);
+	}
+
+	li:hover {
+		transform: scale(1);
+		background: white;
+	}
+	a {
+		color: black;
+	}
+}
+
+@import 'mobile';

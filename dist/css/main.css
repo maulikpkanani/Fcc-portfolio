@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem; }
+
+h2 {
+  font-size: 3.5rem;
+  margin: 4rem;
+  padding-bottom: 0.2rem;
+  font-weight: 100;
+  color: rgba(128, 128, 128, 0.801);
+  display: inline-block;
+  border-bottom: 2px solid rgba(255, 136, 0, 0.911); }
+
+#navbar {
+  height: 65px;
+  width: 100%;
+  background: rgba(255, 136, 0, 0.911);
+  z-index: 5;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.726);
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #navbar ul {
+    display: flex; }
+  #navbar li {
+    list-style: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    transition: border 0.2s ease-in; }
+  #navbar ul li:nth-child(2) {
+    margin-left: auto; }
+  #navbar ul li:first-child {
+    margin-left: 30px; }
+  #navbar li:hover {
+    border: 2px solid white; }
+  #navbar a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/dist/img/img-1.jpg");
+  color: rgba(255, 136, 0, 0.911);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600; }
+  #welcome-section h1 {
+    font-size: 6rem;
+    border-bottom: 2px solid white; }
+  #welcome-section p {
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 5px; }
+
+#about {
+  height: 100vh;
+  width: 100%; }
+  #about #info {
+    padding: 1.8rem;
+    position: relative;
+    top: 14rem;
+    left: 38rem;
+    max-width: 50rem;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.726);
+    color: rgba(128, 128, 128, 0.801); }
+    #about #info p {
+      margin: 1.5rem auto; }
+  #about #info::before {
+    content: '';
+    height: 11rem;
+    position: absolute;
+    width: 5rem;
+    background: rgba(255, 136, 0, 0.911);
+    left: -3.3rem;
+    top: 3rem;
+    transform: rotate(-3deg); }
+  #about #info::after {
+    content: '';
+    height: 11rem;
+    position: absolute;
+    width: 5rem;
+    background: rgba(255, 136, 0, 0.911);
+    left: 52rem;
+    top: 3rem;
+    transform: rotate(-3deg); }
+
+#projects {
+  background: lightgrey; }
+  #projects #p-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  #projects .project-tile {
+    flex-basis: 500px;
+    margin: 5rem;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    border: 2rem solid white;
+    position: relative; }
+    #projects .project-tile img {
+      max-width: 100%;
+      max-height: 100%; }
+    #projects .project-tile .project-tile:nth-child(4) h3 {
+      top: -8rem; }
+    #projects .project-tile h3 {
+      background: rgba(255, 136, 0, 0.911);
+      padding: 2rem 1.6rem;
+      text-transform: uppercase;
+      position: absolute;
+      color: black;
+      top: -6rem;
+      left: 50%;
+      text-align: center;
+      line-height: 2rem;
+      transform: rotate(-4deg) translate(-50%);
+      box-shadow: inset 0 1rem 3rem rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
+  #projects .project-tile::after {
+    content: '';
+    height: 8rem;
+    position: absolute;
+    width: 20rem;
+    background: rgba(255, 136, 0, 0.911);
+    left: 35%;
+    top: 23rem;
+    transform: rotate(-3deg);
+    box-shadow: inset 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
+
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.863); }
+  footer h1 {
+    word-spacing: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    padding-top: 5rem;
+    color: white; }
+  footer ul {
+    padding-top: 1.3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  footer li {
+    font-size: 2.1rem;
+    color: black;
+    margin: 2rem;
+    list-style: none;
+    padding: 1.6rem;
+    border-radius: 50%;
+    background: rgba(255, 136, 0, 0.911);
+    transition: all 0.3s;
+    transform: scale(0.8); }
+  footer li:hover {
+    transform: scale(1);
+    background: white; }
+  footer a {
+    color: black; }
